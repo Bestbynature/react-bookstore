@@ -177,8 +177,9 @@ nav ul li a {
 .form input {
   margin-right: 1rem;
   border: none;
-  line-height: 2rem;
+  line-height: 1.5rem;
   transition: all 0.5s ease-in-out;
+  padding: 2px 8px;
 }
 
 .form input:focus {
