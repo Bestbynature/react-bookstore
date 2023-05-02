@@ -13,12 +13,11 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[React Bookstore\] ](#-React Bookstore-)
+- [📖 React Bookstore](#-React Bookstore-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
-    - [You can find the live version of this web application in this link =\>**React Bookstore**](#you-can-find-the-live-version-of-this-web-application-in-this-link-React Bookstore)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
