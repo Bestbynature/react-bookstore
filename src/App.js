@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import Bookstore from './bookstore';
-import './styles.css';
-import Layout from './layout';
-import Header from './header';
-import Categories from './categories';
+import Bookstore from './components/bookstore';
+import './components/styles.css';
+import Layout from './components/layout';
+import Header from './components/header';
+import Categories from './components/categories';
 
 const App = () => (
   <div className="App">
