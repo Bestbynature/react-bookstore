@@ -11,30 +11,29 @@ body {
 }
 
 .header {
-  display: flex;
-  align-items: center;
   padding: 15px 6.25rem;
   background-color: #fff;
 }
 
 .header-left {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  flex-basis: 90%;
+  justify-content: center;
 }
 
-.header-left h3 {
+.header h3 {
   margin-right: 15px;
   color: #0290ff;
 }
 
-.logo {
-  display: flex;
+.header-left svg {
+  color: #0290ff;
   font-size: 2rem;
-  justify-content: flex-end;
-  flex-basis: 10%;
-  cursor: pointer;
+}
+
+.header-left nav {
+  display: flex;
 }
 
 nav ul {
@@ -46,7 +45,7 @@ nav ul span {
 }
 
 nav ul li {
-  display: inline;
+  display: inline-flex;
   margin-right: 15px;
 }
 
@@ -213,4 +212,10 @@ nav ul li a {
 
 .form button:hover {
   filter: invert(100%);
+}
+
+@media screen and (max-width: 500px) {
+  .header-left {
+    grid-template-columns: 1fr;
+  }
 }

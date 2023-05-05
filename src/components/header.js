@@ -24,11 +24,8 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </div>
-      <div className="logo">
         <BiUserCircle />
       </div>
-
     </div>
   );
 };
