@@ -22,7 +22,6 @@ const Form = () => {
 
   return (
     <div className="form">
-      <hr />
       <h3>
         ADD NEW BOOK
       </h3>

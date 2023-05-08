@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BiUserCircle } from 'react-icons/bi';
+import { ImUser } from 'react-icons/im';
 
 const Header = () => {
   const [active, setActive] = useState(1);
@@ -12,7 +12,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-left">
-        <h3>Bookstore CMS</h3>
+        <h3>
+          <Link to="/">Bookstore CMS</Link>
+        </h3>
         <nav>
           <ul>
             <li>
@@ -24,7 +26,9 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <BiUserCircle />
+        <div className="icon">
+          <ImUser />
+        </div>
       </div>
     </div>
   );

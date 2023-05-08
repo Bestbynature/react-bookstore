@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -5,15 +7,17 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   background-color: #f5f6fa;
   padding: 9rem 6.25rem;
 }
 
 .header {
-  padding: 15px 6.25rem;
+  padding: 0.5rem 6.25rem;
   background-color: #fff;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  height: 5.9rem;
+  display: flex;
 }
 
 .header-left {
@@ -21,16 +25,39 @@ body {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-.header h3 {
+nav ul li a {
+  text-decoration: none;
+  color: #121212;
+  padding: 10px;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.header-left h3 a {
   margin-right: 15px;
   color: #0290ff;
+  text-decoration: none;
+  font-size: 1.8rem;
 }
 
-.header-left svg {
+.icon {
+  width: 2.813rem;
+  height: 2.813rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon svg {
   color: #0290ff;
-  font-size: 2rem;
+  width: 1.063rem;
+  height: 1.063rem;
 }
 
 .header-left nav {
@@ -50,19 +77,15 @@ nav ul li {
   margin-right: 15px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  padding: 10px;
-}
-
 .active-link {
-  color: blueviolet;
+  opacity: 1;
+  color: #121212;
 }
 
 .App {
   background-color: #fafafa;
-  border: 2px solid gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -77,18 +100,28 @@ nav ul li a {
   padding: 0 6.25rem;
 }
 
+.booklist {
+  font-family: 'Roboto Slab', serif;
+}
+
+.booklist hr {
+  border: 1px solid #e8e8e8;
+  margin-top: 2.5rem;
+}
+
 .booklist ul li {
   list-style-type: none;
-  padding: 15px;
-  margin: 5px auto;
-  border: 2px solid gray;
+  padding: 1rem 0.5rem;
+  margin: 10px auto;
+  border: 1px solid #e8e8e8;
   background-color: #fff;
   display: grid;
+  grid-template-columns: 40% 25% 30%;
+  grid-gap: 20px;
+}
 
-  /* grid-template-columns: repeat(auto-fit minmax(200px, 1fr)); */
-  grid-template-columns: 1fr 1fr 1fr;
-
-  /* width: 100%; */
+.booklist ul li:hover {
+  background-color: #e8e8e8;
 }
 
 .part1 {
@@ -99,30 +132,54 @@ nav ul li a {
 .part2 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #121212;
 }
 
 .part3 {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
   justify-content: space-around;
+  align-items: flex-start;
+  font-weight: 300;
 }
 
 .part1 p {
   font-size: 0.6rem;
 }
 
+.part2b {
+  margin-left: 0.5rem;
+}
+
 .part2b p {
-  font-size: 0.4rem;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.part2b h4 {
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 .part3 p {
-  font-size: 0.4rem;
+  color: #121212;
+}
+
+.part3 p:nth-of-type(1) {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.part3 p:nth-of-type(2) {
+  font-size: 1rem;
 }
 
 .part1 p:nth-of-type(2) {
   color: #4cb0ff;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 .part2 img {
@@ -130,23 +187,20 @@ nav ul li a {
 }
 
 .part2 hr {
-  height: 70%;
+  height: 100%;
+  align-self: flex-end;
   border: 1px solid rgb(222, 216, 216);
+  margin-left: 2.5rem;
 }
 
 .part3 button {
-  background-color: #4cb0ff;
-  padding: 5px;
+  background-color: #0290ff;
+  padding: 5px 5px;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
   color: #fff;
-  font-size: 0.4rem;
-  width: 60%;
-}
-
-.part3 p:nth-of-type(2) {
-  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .btns {
@@ -157,11 +211,12 @@ nav ul li a {
 
 .btns button {
   margin-right: 10px;
-  background-color: #fff;
+  background-color: transparent;
   color: cornflowerblue;
   border: none;
   cursor: pointer;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 .btns span {
@@ -172,27 +227,26 @@ nav ul li a {
 .form {
   display: flex;
   flex-direction: column;
-}
-
-.form hr {
-  margin: 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 2.5rem;
 }
 
 .form h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: #888;
+  font-weight: bold;
 }
 
 .form form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 60% 25% 15%;
   grid-gap: 20px;
 }
 
 .form input {
-  border: 1px solid gray;
-  border-radius: 10px;
-  line-height: 1.5rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  height: 2.8rem;
   transition: all 0.5s ease-in-out;
   padding: 2px 8px;
 }
@@ -203,17 +257,21 @@ nav ul li a {
 }
 
 .form input:hover {
-  box-shadow: 0 0 3px 3px #424548;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form input::placeholder {
+  font-size: 1rem;
 }
 
 .form button {
-  background-color: #4cb0ff;
+  background-color: #0290ff;
   padding: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
   color: #fff;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   transition: all 0.5s ease-in-out;
 }
 
