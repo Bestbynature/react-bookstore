@@ -1,17 +1,26 @@
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
 import progress from '../assets/progress.png';
+import { removeBook } from '../redux/books/booksSlice';
 
-const Bookitem = ({ bookprop }) => (
-  <>
+const Bookitem = ({ book }) => {
+  const dispatch = useDispatch();
+
+  return (
     <li>
       <div className="part1">
-        <p>{bookprop.genre}</p>
-        <h4>{bookprop.title}</h4>
-        <p>{bookprop.author}</p>
+        <p>{book.category}</p>
+        <h4>{book.title}</h4>
+        <p>{book.author}</p>
         <div className="btns">
           <button type="button">Comment</button>
           <span> | </span>
-          <button type="button">Remove</button>
+          <button
+            type="button"
+            onClick={() => dispatch(removeBook(book.item_id))}
+          >
+            Remove
+          </button>
           <span> | </span>
           <button type="button">Edit</button>
         </div>
@@ -20,8 +29,7 @@ const Bookitem = ({ bookprop }) => (
         <img src={progress} alt="progres-bar" />
         <div className="part2b">
           <h4>
-            {bookprop.percent}
-            %
+            64%
           </h4>
           <p>Completed</p>
         </div>
@@ -29,15 +37,15 @@ const Bookitem = ({ bookprop }) => (
       </div>
       <div className="part3">
         <p>Current Chapter</p>
-        <p>{bookprop.chapter}</p>
+        <p>chapter</p>
         <button type="button">UPDATE PROGRESS</button>
       </div>
     </li>
-  </>
-);
+  );
+};
 
 Bookitem.propTypes = {
-  bookprop: PropTypes.instanceOf(Object).isRequired,
+  book: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Bookitem;

@@ -13,6 +13,7 @@ body {
 .header {
   padding: 15px 6.25rem;
   background-color: #fff;
+  width: 100%;
 }
 
 .header-left {
@@ -63,11 +64,17 @@ nav ul li a {
   background-color: #fafafa;
   border: 2px solid gray;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .bookstore {
   margin: 2rem 6.25rem;
   height: auto;
+  width: 100%;
+  padding: 0 6.25rem;
 }
 
 .booklist ul li {
@@ -76,24 +83,26 @@ nav ul li a {
   margin: 5px auto;
   border: 2px solid gray;
   background-color: #fff;
-  display: flex;
+  display: grid;
+
+  /* grid-template-columns: repeat(auto-fit minmax(200px, 1fr)); */
+  grid-template-columns: 1fr 1fr 1fr;
+
+  /* width: 100%; */
 }
 
 .part1 {
-  flex-basis: 50%;
   display: flex;
   flex-direction: column;
 }
 
 .part2 {
-  flex-basis: 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .part3 {
-  flex-basis: 35%;
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
@@ -160,6 +169,11 @@ nav ul li a {
   color: gray;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form hr {
   margin: 2rem auto;
 }
@@ -170,12 +184,14 @@ nav ul li a {
 }
 
 .form form {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
 }
 
 .form input {
-  margin-right: 1rem;
-  border: none;
+  border: 1px solid gray;
+  border-radius: 10px;
   line-height: 1.5rem;
   transition: all 0.5s ease-in-out;
   padding: 2px 8px;
@@ -190,18 +206,9 @@ nav ul li a {
   box-shadow: 0 0 3px 3px #424548;
 }
 
-.form input:nth-of-type(1) {
-  flex-basis: 60%;
-}
-
-.form input:nth-of-type(2) {
-  flex-basis: 25%;
-}
-
 .form button {
-  flex-basis: 15%;
   background-color: #4cb0ff;
-  padding: 5px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
