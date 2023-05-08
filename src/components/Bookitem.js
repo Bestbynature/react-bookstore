@@ -3,13 +3,13 @@ import { useDispatch } from 'react-redux';
 import progress from '../assets/progress.png';
 import { removeBook } from '../redux/books/booksSlice';
 
-const Bookitem = ({ book, id }) => {
+const Bookitem = ({ book, id, others }) => {
   const dispatch = useDispatch();
 
   return (
     <li>
       <div className="part1">
-        <p>{book.category}</p>
+        <p>{others.z}</p>
         <h4>{book.title}</h4>
         <p>{book.author}</p>
         <div className="btns">
@@ -29,7 +29,7 @@ const Bookitem = ({ book, id }) => {
         <img src={progress} alt="progres-bar" />
         <div className="part2b">
           <h4>
-            64%
+            {others.x}
           </h4>
           <p>Completed</p>
         </div>
@@ -37,7 +37,7 @@ const Bookitem = ({ book, id }) => {
       </div>
       <div className="part3">
         <p>Current Chapter</p>
-        <p>chapter</p>
+        <p>{others.y}</p>
         <button type="button">UPDATE PROGRESS</button>
       </div>
     </li>
@@ -47,6 +47,7 @@ const Bookitem = ({ book, id }) => {
 Bookitem.propTypes = {
   book: PropTypes.instanceOf(Object).isRequired,
   id: PropTypes.string.isRequired,
+  others: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Bookitem;
