@@ -6,7 +6,9 @@ import { getBooks } from '../redux/books/booksSlice';
 const Booklist = () => {
   const dispatch = useDispatch();
 
-  const { books, isLoading, count } = useSelector((store) => store.books);
+  const {
+    books, isLoading, count, xyz,
+  } = useSelector((store) => store.books);
 
   useEffect(() => {
     dispatch(getBooks());
@@ -18,12 +20,14 @@ const Booklist = () => {
       <ul>
         {Object.keys(books).length === 0 && !isLoading && <p>No books available</p>}
 
-        {Object.keys(books).map((key) => {
+        {Object.keys(books).map((key, i) => {
           const book = books[key][0];
-          return <Bookitem key={key} book={book} id={key} />;
+          const others = xyz[i] || xyz[2];
+          return <Bookitem key={key} book={book} id={key} others={others} />;
         })}
 
       </ul>
+      <hr />
     </div>
   );
 };
