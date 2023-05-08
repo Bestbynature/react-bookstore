@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook, changeName, changeAuthor } from '../redux/books/booksSlice';
+import { v1 as uuidv1 } from 'uuid';
+import { changeName, changeAuthor, postBook } from '../redux/books/booksSlice';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -8,12 +9,15 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook(
-      {
-        title,
-        author,
-      },
-    ));
+
+    const newBook = {
+      item_id: uuidv1(),
+      category: 'Action',
+      title,
+      author,
+    };
+
+    dispatch(postBook(newBook));
   };
 
   return (

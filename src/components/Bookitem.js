@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import progress from '../assets/progress.png';
 import { removeBook } from '../redux/books/booksSlice';
 
-const Bookitem = ({ book }) => {
+const Bookitem = ({ book, id }) => {
   const dispatch = useDispatch();
 
   return (
@@ -17,7 +17,7 @@ const Bookitem = ({ book }) => {
           <span> | </span>
           <button
             type="button"
-            onClick={() => dispatch(removeBook(book.item_id))}
+            onClick={() => dispatch(removeBook(id))}
           >
             Remove
           </button>
@@ -46,6 +46,7 @@ const Bookitem = ({ book }) => {
 
 Bookitem.propTypes = {
   book: PropTypes.instanceOf(Object).isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Bookitem;
