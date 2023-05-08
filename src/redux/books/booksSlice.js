@@ -8,8 +8,11 @@ const initialState = {
   author: '',
   error: undefined,
   isLoading: false,
-  count: 1,
-
+  xyz: [{ x: '64%', y: 'Chapter 17', z: 'Action' },
+    { x: '8%', y: 'Chapter 3: A lesson learned', z: 'Science Fiction' },
+    { x: '0%', y: 'Introduction', z: 'Economy' },
+  ],
+  count: 0,
 };
 
 export const getBooks = createAsyncThunk('books/getBooks', async () => {
