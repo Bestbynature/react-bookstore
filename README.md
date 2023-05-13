@@ -34,9 +34,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [React Bookstore] <a name="about-project"></a>
+# 📖 [React Bookstore](https://react-bookstore-deployment.onrender.com) <a name="about-project"></a>
 
-**[React Bookstore]** application is built with react using create-react-app. It essentially displays a list of books and allows users to either add a new book or remove a selected book. Other pages are also accessible with routers.
+**[React Bookstore](https://react-bookstore-deployment.onrender.com)** application is built with react using create-react-app. It essentially displays a list of books and allows users to either add a new book or remove a selected book. Other pages are also accessible with routers.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -68,7 +68,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-### **Please check back later**[React Bookstore Live Demo](https://react-bookstore-deployment.onrender.com)
+### [React Bookstore Live Demo](https://react-bookstore-deployment.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
